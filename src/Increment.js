@@ -1,12 +1,16 @@
-import { prettyDOM } from '@testing-library/react'
 import React from 'react'
 import './App.css'
+
+function Parent(){
+    var cendrol = '01'
+    return cendrol
+}
 
 class Increment extends React.Component {
     constructor(){
         super()
         this.state = {
-            count: '01'
+            count: Parent() 
         }
     }
     handleChange = () =>{
@@ -27,5 +31,6 @@ class Increment extends React.Component {
         )
     }
 }
+
 
 export default Increment
